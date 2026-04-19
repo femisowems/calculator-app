@@ -11,7 +11,7 @@ import { useCalculator } from '@/hooks/useCalculator';
 
 export default function Home() {
   const { 
-    displayValue, formula, operator, isError, isScientific, isRadians,
+    displayValue, formula, isError, isScientific, isRadians,
     memoryValue, history,
     handleInput, toggleScientific, toggleUnits, recallHistory 
   } = useCalculator();
@@ -46,7 +46,6 @@ export default function Home() {
           <Keypad 
             onInput={handleInput} 
             onToggleUnits={toggleUnits}
-            activeOperator={operator} 
             isScientific={isScientific} 
             isRadians={isRadians}
           />

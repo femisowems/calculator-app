@@ -5,12 +5,11 @@ import Button from './Button';
 interface KeypadProps {
   onInput: (val: string) => void;
   onToggleUnits: () => void;
-  activeOperator: string | null;
   isScientific: boolean;
   isRadians: boolean;
 }
 
-const Keypad: React.FC<KeypadProps> = ({ onInput, onToggleUnits, activeOperator, isScientific, isRadians }) => {
+const Keypad: React.FC<KeypadProps> = ({ onInput, onToggleUnits, isScientific, isRadians }) => {
   const basicKeys = [
     { label: 'AC', type: 'control' },
     { label: 'C', type: 'control' },
@@ -80,7 +79,6 @@ const Keypad: React.FC<KeypadProps> = ({ onInput, onToggleUnits, activeOperator,
             key={key.label}
             label={key.label}
             type={key.type as any}
-            isActive={activeOperator === (key.value || key.label)}
             onClick={() => onInput(key.value || key.label)}
           />
         ))}
