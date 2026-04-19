@@ -35,7 +35,7 @@ const initialState: State = {
   formula: '',
   isError: false,
   overwrite: false,
-  isScientific: false,
+  isScientific: true,
   isRadians: true,
   memoryValue: 0,
   history: [],
